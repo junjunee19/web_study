@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="java.lang.String" alias="str"/>
+		<typeAlias type="java.lang.Integer" alias="int"/>
+		<typeAlias type="com.board.dto.MemberVO" alias="member" />
+		<typeAlias type="com.board.dto.BoardVO" alias="board"/>		
+		<typeAlias type="com.board.dto.ReplyVO" alias="reply"/>
+	</typeAliases>
+
+</configuration>

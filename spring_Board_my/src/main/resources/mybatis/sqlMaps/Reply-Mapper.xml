@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ReplyMapper">
+	<select id="selectReplyList" resultType="reply">
+		select *
+		from tbl_reply
+		where bno=#{bno}
+		order by rno desc
+	</select>
+	
+	<update id="insertReply" >
+		insert into tbl_reply(rno,bno,replytext,replyer)
+		values(reply_seq.nextval,#{bno},#{replytext},#{replyer})
+	</update>
+	
+	<update id="updateReply">
+		update tbl_reply 
+		set 
+		replytext=#{replytext},
+		updatedate=sysdate
+		where rno=#{rno}		
+	</update>
+	
+	<update id="deleteReply">
+		delete from tbl_reply
+		where rno=#{rno}		
+	</update>
+	
+	<select id="countReply" resultType="int">
+		select count(bno) 
+		from tbl_reply
+		where bno=#{bno}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
